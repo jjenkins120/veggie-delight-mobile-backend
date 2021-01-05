@@ -10,9 +10,7 @@ class User < ApplicationRecord
   has_many :sent_messages, foreign_key: :sender_id, class_name: 'Message'
   has_many :recipients, through: :sent_messages
 
-  
-
-
-
+  has_many :requests_as_requestor, foreign_key: :requestor_id, class_name: 'Request'
+  has_many :requests_as_receiver, foreign_key: :receiver_id, class_name: 'Request'
 
 end
