@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :usertags
   resources :tags
-  resources :requests
   resources :matches
   resources :messages
   resources :users
