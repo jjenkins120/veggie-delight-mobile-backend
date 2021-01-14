@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'login/create'
   resources :usertags
   resources :tags
   resources :matches
