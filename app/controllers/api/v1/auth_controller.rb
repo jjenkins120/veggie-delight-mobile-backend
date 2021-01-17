@@ -1,4 +1,5 @@
 require 'JWT'
+require 'dotenv-rails'
 
 class Api::V1::AuthController < ApplicationController
 
