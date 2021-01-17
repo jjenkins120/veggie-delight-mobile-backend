@@ -5,6 +5,7 @@ class Api::V1::AuthController < ApplicationController
     def hmac_secret
         ENV["API_SECRET_KEY"]
     end
+    # The hmac_secret method just gets and returns our secret from our environment
 
     def create
         user = User.find_by(email: params[:email])
