@@ -25,7 +25,7 @@ jeff = User.create(
     email: 'jjenkins120@gmail.com',
     bio: 'Just a guy looking for veggies',
     interested_in: 'the ladies',
-    birth_date: DateTime.now,
+    birth_date: (DateTime.now - 4000),
     how_far: 5,
     profile_img_url: 'https://jeffajenkins.com/static/media/face.b1c5f729.jpg'
 )
@@ -37,7 +37,7 @@ austin = User.create(
     email: '',
     bio: 'Just another guy looking for veggies',
     interested_in: 'the ladies and the fellas',
-    birth_date: DateTime.now,
+    birth_date: (DateTime.now - 4000),
     how_far: 5,
     profile_img_url: ''
 )

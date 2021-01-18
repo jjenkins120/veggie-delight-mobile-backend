@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_image_url, :interested_in, :how_far
+  attributes :id, :email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_img_url, :interested_in, :how_far
 
   has_many :user_tags
   
