@@ -30,7 +30,7 @@ class MatchesController < ApplicationController
     private
 
     def match_params
-        params.require(:match).permit(:requestor, :receiver, :status, :first_message_sent)
+        params.require(:match).permit(:requestor_id, :receiver_id, :status, :first_message_sent)
     end
 
 end

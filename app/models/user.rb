@@ -10,15 +10,15 @@ class User < ApplicationRecord
   has_many :requests_as_receiver, foreign_key: :receiver_id, class_name: 'Match'
   has_many :requestors, through: :requests_as_receiver
   
-  PASSWORD_REQUIREMENTS = /\A 
-      (?=.{8,}) # at least 8 characters
-      (?=.*\d) # at least 1 number
-      (?=.*[a-z]) # at least 1 lowercase
-      (?=.*[A-Z]) # at least one uppercase
-      (?=.*[[:^alnum:]]) # at least 1 symbol
-  /x
+  # PASSWORD_REQUIREMENTS = /\A 
+  #     (?=.{8,}) # at least 8 characters
+  #     (?=.*\d) # at least 1 number
+  #     (?=.*[a-z]) # at least 1 lowercase
+  #     (?=.*[A-Z]) # at least one uppercase
+  #     (?=.*[[:^alnum:]]) # at least 1 symbol
+  # /x
 
-  validates :password, format: PASSWORD_REQUIREMENTS
+  # validates :password, format: PASSWORD_REQUIREMENTS
   validates :email, presence: true, uniqueness: true
 
 end
