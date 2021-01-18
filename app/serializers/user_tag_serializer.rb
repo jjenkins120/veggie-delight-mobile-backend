@@ -1,4 +1,4 @@
-class UsertagSerializer < ActiveModel::Serializer
+class UserTagSerializer < ActiveModel::Serializer
   attributes :id, :user_id, :tag_id
 
   belongs_to :user
