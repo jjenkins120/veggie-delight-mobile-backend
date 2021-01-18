@@ -14,7 +14,8 @@ class Api::V1::AuthController < ApplicationController
         if user && user.authenticate(params[:password])
             payload = {user_id: user.id}
             token = JWT.encode(payload, hmac_secret, 'HS256')
-            render json: {id: user.id, email: user.email, token: token}
+            # render json: {id: user.id, email: user.email, token: token}
+            render json: {id: user.id, token: token}
         else
             render json: {error: 'Invalid email or password.'}
         end
@@ -27,7 +28,8 @@ class Api::V1::AuthController < ApplicationController
         user = User.find(user_id)
 
         if user
-            render json: { id: user.id, email: user.email, token: token }
+            # render json: { id: user.id, email: user.email, token: token }
+            render json: { id: user.id, token: token }
         else
             render json: { error: 'Invalid token'}
         end

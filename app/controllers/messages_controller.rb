@@ -1,3 +1,36 @@
 class MessagesController < ApplicationController
-    before_action :require_login
+
+    def index
+        messages = Message.all 
+        render json: messages
+    end
+
+    def show
+        message = Message.find(params[:id])
+        render json: message
+    end
+
+    def create
+        message = Message.create(message_params)
+        render json: message
+    end
+
+    def update
+        message = Message.find(params[:id])
+        message.update(message_params)
+        render json: message
+    end
+
+    def destroy
+        message = Message.find(params[:id])
+        message.destroy
+        render json: { message: 'success'}
+    end
+
+    private
+
+    def message_params
+        params.require(:message).permit(:content, :read, :match_id)
+    end
+
 end
