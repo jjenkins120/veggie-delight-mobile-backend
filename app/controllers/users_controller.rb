@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    wrap_parameters :user, include: [:email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_image_url, :interested_in, :how_far]
+    wrap_parameters :user, include: [:email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_img_url, :interested_in, :how_far]
 
     def index
         users = User.all 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_image_url, :interested_in, :how_far)
+        params.require(:user).permit(:email, :password, :first_name, :birth_date, :veggie_type, :bio, :profile_img_url, :interested_in, :how_far)
     end
 
 end

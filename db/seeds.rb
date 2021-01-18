@@ -27,7 +27,7 @@ jeff = User.create(
     interested_in: 'the ladies',
     birth_date: DateTime.now,
     how_far: 5,
-    profile_image_url: 'https://jeffajenkins.com/static/media/face.b1c5f729.jpg'
+    profile_img_url: 'https://jeffajenkins.com/static/media/face.b1c5f729.jpg'
 )
 
 austin = User.create(
@@ -39,7 +39,7 @@ austin = User.create(
     interested_in: 'the ladies and the fellas',
     birth_date: DateTime.now,
     how_far: 5,
-    profile_image_url: ''
+    profile_img_url: ''
 )
 
 
