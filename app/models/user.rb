@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_many :usertags
-  has_many :tags, through: :usertags 
+  has_many :user_tags
+  has_many :tags, through: :user_tags 
 
   has_many :requests_as_requestor, foreign_key: :requestor_id, class_name: 'Match'
   has_many :receivers, through: :requests_as_requestor

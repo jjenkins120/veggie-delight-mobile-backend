@@ -19,25 +19,25 @@ puts "Seeding Data"
 puts "Seeding Users"
 
 jeff = User.create(
-    first_name: 'Jeff'
+    first_name: 'Jeff',
     password: '123',
-    veggie_type: 'lacto-ovo'
+    veggie_type: 'lacto-ovo',
     email: 'jjenkins120@gmail.com',
     bio: 'Just a guy looking for veggies',
     interested_in: 'the ladies',
-    birth_date: DateTime.now
+    birth_date: DateTime.now,
     how_far: 5,
     profile_image_url: 'https://jeffajenkins.com/static/media/face.b1c5f729.jpg'
 )
 
 austin = User.create(
-    first_name: 'Austin'
+    first_name: 'Austin',
     password: '123',
-    veggie_type: ''
+    veggie_type: '',
     email: '',
     bio: 'Just another guy looking for veggies',
     interested_in: 'the ladies and the fellas',
-    birth_date: DateTime.now
+    birth_date: DateTime.now,
     how_far: 5,
     profile_image_url: ''
 )

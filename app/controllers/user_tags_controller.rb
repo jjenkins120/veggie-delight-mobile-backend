@@ -1,4 +1,4 @@
-class UsertagsController < ApplicationController
+class UserTagsController < ApplicationController
 
     def index
         user_tags = UserTag.all 

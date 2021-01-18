@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 2021_01_18_221051) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_tags", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id"], name: "index_user_tags_on_tag_id"
+    t.index ["user_id"], name: "index_user_tags_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.datetime "birth_date"
@@ -53,16 +62,7 @@ ActiveRecord::Schema.define(version: 2021_01_18_221051) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "usertags", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "tag_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["tag_id"], name: "index_usertags_on_tag_id"
-    t.index ["user_id"], name: "index_usertags_on_user_id"
-  end
-
   add_foreign_key "messages", "matches"
-  add_foreign_key "usertags", "tags"
-  add_foreign_key "usertags", "users"
+  add_foreign_key "user_tags", "tags"
+  add_foreign_key "user_tags", "users"
 end
