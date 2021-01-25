@@ -21,6 +21,12 @@ class User < ApplicationRecord
   # validates :password, format: PASSWORD_REQUIREMENTS
   validates :email, presence: true, uniqueness: true
 
+  serialize :interested_in_gender, Array
+  serialize :interested_in_veggie, Array
+  serialize :interested_in_location, Hash
+  serialize :interested_in_age, Hash
+  serialize :location, Hash
+
 end
 
 

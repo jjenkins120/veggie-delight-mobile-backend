@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_18_221051) do
+ActiveRecord::Schema.define(version: 2021_01_25_221141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,10 +56,14 @@ ActiveRecord::Schema.define(version: 2021_01_18_221051) do
     t.string "password_digest"
     t.text "bio"
     t.string "profile_img_url"
-    t.string "interested_in"
-    t.integer "how_far"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "gender"
+    t.string "interested_in_gender"
+    t.string "interested_in_veggie"
+    t.integer "interested_in_location"
+    t.integer "interested_in_age"
+    t.integer "location"
   end
 
   add_foreign_key "messages", "matches"
