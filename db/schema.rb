@@ -61,9 +61,9 @@ ActiveRecord::Schema.define(version: 2021_01_25_221141) do
     t.string "gender"
     t.string "interested_in_gender"
     t.string "interested_in_veggie"
-    t.integer "interested_in_location"
-    t.integer "interested_in_age"
-    t.integer "location"
+    t.string "interested_in_location"
+    t.string "interested_in_age"
+    t.string "location"
   end
 
   add_foreign_key "messages", "matches"

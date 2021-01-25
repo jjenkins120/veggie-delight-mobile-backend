@@ -26,16 +26,16 @@ jeff = User.create(
     interested_in_gender: ['women'],
     interested_in_veggie: ['lacto-ovo'],
     interested_in_location: {
-        longitude: 0, 
-        latitude: 0
+        longitude: 1, 
+        latitude: 1   
     },
     interested_in_age: {
         max_age: 50,
         min_age: 25 
     },
     location: {
-        longitude: 0,
-        latitude: 0,
+        longitude: 1,
+        latitude: 1,
     },
     bio: 'Just a guy looking for veggies',
     gender: 'male',
