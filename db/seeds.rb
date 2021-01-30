@@ -23,15 +23,16 @@ jeff = User.create(
     password: '123',
     veggie_type: 'lacto-ovo',
     email: 'jjenkins120@gmail.com',
-    interested_in_gender: ['women'],
     interested_in_veggie: ['lacto-ovo'],
     interested_in_location: {
         longitude: 1, 
-        latitude: 1   
+        latitude: 1, 
+        radius: 1
     },
+    interested_in_gender: ['women', 'men'],
     interested_in_age: {
-        max_age: 50,
-        min_age: 25 
+        max_age: 45,
+        min_age: 30 
     },
     location: {
         longitude: 1,
