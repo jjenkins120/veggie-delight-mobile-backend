@@ -59,11 +59,11 @@ ActiveRecord::Schema.define(version: 2021_01_25_221141) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "gender"
-    t.string "interested_in_gender"
-    t.string "interested_in_veggie"
-    t.string "interested_in_location"
-    t.string "interested_in_age"
-    t.string "location"
+    t.text "interested_in_gender"
+    t.text "interested_in_veggie"
+    t.text "interested_in_location"
+    t.text "interested_in_age"
+    t.text "location"
   end
 
   add_foreign_key "messages", "matches"
