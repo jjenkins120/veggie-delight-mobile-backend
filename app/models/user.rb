@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  # accepts_nested_attributes_for :interested_in_gender, :interested_in_age, :interested_in_location, :interested_in_veggie, :location
 
   has_many :user_tags
   has_many :tags, through: :user_tags 
